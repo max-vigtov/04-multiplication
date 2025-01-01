@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/app.ts",
+    "dev": "ts-node src/app.ts -b 10",
     "dev:nodemon": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
@@ -14,6 +14,11 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^20.14.12",
+    "@types/yargs": "^17.0.33",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
   }
 }

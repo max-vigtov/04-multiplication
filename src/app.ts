@@ -1,16 +1,17 @@
-const fs = require('fs');
+import { yarg } from "./config/plugins/args.plugin";
 
-let data: string = '';
-const base = 5;
+// console.log( process.argv );
 
-for (let index = 0; index < 10; index++) {
-    data += `${base} X ${index + 1} = ${(index + 1) * base}\n`
+// console.log( yarg );
+
+
+(async() => {
+    await main();    
+    
+})();
+
+async function main() {
+    console.log( yarg );
+    
+    
 }
-
-const outPath = `outputs`
-
-fs.mkdirSync(outPath, { recursive: true});
-fs.writeFile('multiplicationTable.txt', data, (err: any) => {
-  if (err) throw err;
-  console.log('El archivo ha sido guardado!');
-});
