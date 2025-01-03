@@ -25,9 +25,9 @@ describe('CreateTableUsecase', () => {
 		const table = createTable.execute( options )
 		const rows = table.split('\n').length
 
-		expect( table ).toContain( '3 X 1 = 3');
-		expect( table ).toContain( '3 X 10 = 30');
-		expect( table ).toContain( '3 X 20 = 60');
+		expect( table ).toContain( '3 X 1 = 3' );
+		expect( table ).toContain( '3 X 10 = 30' );
+		expect( table ).toContain( '3 X 20 = 60' );
 		expect( rows ).toBe( options.limit )
 		
 	  })
