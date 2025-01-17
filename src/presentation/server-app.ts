@@ -2,13 +2,13 @@ import { CreateTable } from "../domain/use-cases/create-table.use-case";
 import { SaveFile } from "../domain/use-cases/save-file.use-case";
 
 interface RunOptions{
-	base: number;
+	base: number; 
 	limit: number;
 	fileName: string;
 	fileDestination: string;
 	showTable: boolean;
 }
-
+  
 export class ServerApp {
 
 	static run({ base, limit, fileName, fileDestination, showTable}: RunOptions){
